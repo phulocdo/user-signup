@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block menu %}
+    {% if status == "signup" %}
+        <li id="mouse-over"><a href="{{ url_for('home') }}">Home</a></li>
+        <li id="mouse-over"><a href="{{ url_for('login') }}">Login</a></li>
+    {% else %}
+        <h7 id="mouse-over">{{name}}</h7>
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+  <div class="jumbo">
+    <h3 style="color: blue">Hello {{name}}, Welcome to the blog!</h3>
+  </div>
+{% endblock %}
+
+{% block foot %}
+ <p>TampaBay LaunchCode 2017</p>
+{% endblock %}

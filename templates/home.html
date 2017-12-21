@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block menu %}
+   <li id="mouse-over"><a href="{{ url_for('about') }}">About</a></li>
+   <li id="mouse-over"><a href="{{ url_for('login') }}">Login</a></li>
+{% endblock %}
+
+{% block content %}
+  <div class="jumbo">
+    <h3>Welcome to the blog!</h3>
+  </div>
+{% endblock %}
+
+{% block foot %}
+ <p>Tampabay LaunchCode 2017</p>
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block menu %}
+   <li id="mouse-over"><a href="{{ url_for('home') }}">Home</a></li>
+{% endblock %}
+
+{% block content %}
+	<div class="container">
+	  <h1 style="text-align: center">Login</h1>
+       	<fieldset>
+           <form  method="POST" action="{{ url_for('login') }}">
+		   {{ form.hidden_tag() }}
+		   {% if error %}
+		      <p style="color: red"><strong>Error:</strong>{{error}}</p>
+
+  		   {% endif %}
+    		   <p>{{ form.username.label}}<br> 
+	           {{form.username}} 
+
+		   {% for error in form.username.errors %} 
+		       <br><small style="color: red">{{error}}</small> 
+		   {% endfor %}</p>
+
+		   <p>{{form.password1.label}}<br>
+	           {{form.password1}}
+
+		   {% for error in form.password1.errors %} 
+		       <br><small style="color: red">{{error}}</small> 
+		   {% endfor %}</p>
+
+    		   <p>{{form.login}}</p>
+             </form>
+             <div class="card-footer text-muted text-center" style="color: blue">
+               Haven't got an account? <a href="{{ url_for('signup') }}">SignUp</a>
+             </div>
+	  </fieldset>
+	</div>
+{% endblock %}
+
+
+{% block foot %}
+ <p>TampaBay LaunchCode 2017</p>
+{% endblock %}
+
