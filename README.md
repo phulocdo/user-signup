@@ -1,6 +1,4 @@
-Tampabay LaunchCode 2017
-Unit#2 
-Assignment: User Signup
+User Signup
 Objective: Create web-app that represent the user with a signup form
 
 Development environment:
